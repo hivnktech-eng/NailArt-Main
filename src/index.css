@@ -1,0 +1,355 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-pink: #FF6FAE;
+  --color-light-pink: #FFC0CB;
+  --color-soft-bg-pink: #FADADD;
+  --color-rose-gold: #E6A4B4;
+  
+  --font-playfair: "Playfair Display", serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer base {
+  :root {
+    font-family: var(--font-inter);
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair);
+  }
+}
+
+/* ===================== */
+/* BASE RESETS           */
+/* ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Remove default input/select outline and add custom */
+input, select, textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===================== */
+/* GLASSMORPHISM         */
+/* ===================== */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-pink {
+  background: rgba(250, 218, 221, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(230, 164, 180, 0.3);
+}
+
+.glass-white {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ===================== */
+/* NAVBAR STYLES         */
+/* ===================== */
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #FF6FAE;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 0 8px rgba(255, 111, 174, 0.3);
+}
+
+/* ===================== */
+/* SCROLL ANIMATIONS     */
+/* ===================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================== */
+/* GRADIENT TEXT         */
+/* ===================== */
+.gradient-text {
+  background: linear-gradient(135deg, #FF6FAE 0%, #E6A4B4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===================== */
+/* SHIMMER EFFECT        */
+/* ===================== */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #FF6FAE 0%, #FFC0CB 30%, #FF6FAE 60%, #E6A4B4 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ===================== */
+/* CARD HOVER EFFECTS    */
+/* ===================== */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(255, 111, 174, 0.15);
+}
+
+/* ===================== */
+/* BUTTON EFFECTS        */
+/* ===================== */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #FF6FAE, #E6A4B4);
+  color: white;
+  border-radius: 9999px;
+  padding: 1rem 2.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px rgba(255, 111, 174, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(255, 111, 174, 0.4);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+/* ===================== */
+/* GLOW EFFECTS          */
+/* ===================== */
+.glow-pink {
+  box-shadow: 0 0 30px rgba(255, 111, 174, 0.3);
+}
+
+.glow-pink:hover {
+  box-shadow: 0 0 50px rgba(255, 111, 174, 0.5);
+}
+
+/* ===================== */
+/* HERO SECTION EXTRAS   */
+/* ===================== */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* ===================== */
+/* FLOATING ANIMATIONS   */
+/* ===================== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes floatSide {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(10px, -15px) rotate(2deg); }
+  66% { transform: translate(-8px, -10px) rotate(-1deg); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 111, 174, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(255, 111, 174, 0.5); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-side {
+  animation: floatSide 6s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2.5s ease-in-out infinite;
+}
+
+/* ===================== */
+/* PARALLAX WRAPPER      */
+/* ===================== */
+.parallax-section {
+  will-change: transform;
+}
+
+/* ===================== */
+/* SPIN SLOW             */
+/* ===================== */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* ===================== */
+/* CUSTOM SCROLLBAR      */
+/* ===================== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff0f3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FF6FAE, #E6A4B4);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6FAE;
+}
+
+/* ===================== */
+/* SELECTION COLOR       */
+/* ===================== */
+::selection {
+  background: rgba(255, 111, 174, 0.2);
+  color: #FF6FAE;
+}
+
+/* ===================== */
+/* SECTION DIVIDERS      */
+/* ===================== */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #FF6FAE40, transparent);
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+/* ===================== */
+/* BEFORE/AFTER SLIDER   */
+/* ===================== */
+.slider-handle {
+  cursor: col-resize;
+  user-select: none;
+}
+
+/* ===================== */
+/* FORM FOCUS STYLES     */
+/* ===================== */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #FF6FAE;
+  box-shadow: 0 0 0 3px rgba(255, 111, 174, 0.12);
+}
+
+/* ===================== */
+/* INSTAGRAM GRID        */
+/* ===================== */
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  gap: 1rem;
+}
+
+/* ===================== */
+/* TAG BADGE             */
+/* ===================== */
+.badge-pink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  background: rgba(255, 111, 174, 0.08);
+  border: 1px solid rgba(255, 111, 174, 0.2);
+  color: #FF6FAE;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ===================== */
+/* RESPONSIVE TWEAKS     */
+/* ===================== */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 100px;
+  }
+}
+
+/* ===================== */
+/* LETTER ANIMATION BASE */
+/* ===================== */
+.letter {
+  display: inline-block;
+  transform-origin: center bottom;
+}
