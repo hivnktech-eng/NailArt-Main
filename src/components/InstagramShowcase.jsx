@@ -113,7 +113,7 @@ const InstagramShowcase = () => {
         {/* Follow CTA */}
         <div className="text-center mt-12">
           <a href="#"
-            className="group inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-[#FF6FAE] via-[#E6A4B4] to-[#FFC0CB] text-white font-poppins font-semibold tracking-widest text-sm uppercase shadow-xl shadow-[#FF6FAE]/25 hover:shadow-[#FF6FAE]/40 hover:-translate-y-1 transition-all duration-300">
+            className="group inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-[#FF6FAE] via-[#D4AF37] to-[#E6A4B4] text-white font-poppins font-semibold tracking-widest text-sm uppercase shadow-xl shadow-[#FF6FAE]/25 hover:shadow-[#D4AF37]/40 hover:-translate-y-1 transition-all duration-300">
             <Instagram className="w-5 h-5" />
             Follow @NailMuse
           </a>

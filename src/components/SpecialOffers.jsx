@@ -16,8 +16,9 @@ const offers = [
     expires: 'Ends March 31',
     highlight: true,
     features: ['Gel Polish Application', 'Custom Floral Hand Art', 'Cuticle Treatment', 'Complimentary Hand Massage'],
-    gradient: 'from-[#FADADD] via-[#FFC0CB]/30 to-white',
+    gradient: 'from-[#FEE8D6]/60 via-[#FADADD]/40 to-white',
     badgeBg: '#FF6FAE',
+    img: 'https://images.unsplash.com/photo-1604655855745-2437e20cd268?w=600&h=300&fit=crop&auto=format&q=80',
   },
   {
     badge: '✨ First Timer',
@@ -29,8 +30,9 @@ const offers = [
     expires: 'Always available',
     highlight: false,
     features: ['Shape & File', 'Cuticle Care', 'Polish of Choice', 'Mini Hand Massage'],
-    gradient: 'from-white to-[#FFC0CB]/20',
-    badgeBg: '#E6A4B4',
+    gradient: 'from-[#E8F0E4] to-white',
+    badgeBg: '#8A9A5B',
+    img: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&h=300&fit=crop&auto=format&q=80',
   },
   {
     badge: '💎 VIP Bundle',
@@ -42,8 +44,9 @@ const offers = [
     expires: 'Limited spots',
     highlight: false,
     features: ['Full Mani + Pedi', 'Design of Choice', 'Paraffin Wax Spa', 'Sparkling Refreshment'],
-    gradient: 'from-fuchsia-50 to-pink-50',
-    badgeBg: '#FF6FAE',
+    gradient: 'from-[#EADDFF]/40 to-[#FDF5E6]/40',
+    badgeBg: '#D4AF37',
+    img: 'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=600&h=300&fit=crop&auto=format&q=80',
   },
 ];
 
@@ -134,6 +137,12 @@ const SpecialOffers = () => {
               {offer.highlight && (
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF6FAE] via-[#E6A4B4] to-[#FF6FAE]" />
               )}
+
+              {/* Offer image */}
+              <div className="relative h-44 overflow-hidden">
+                <img src={offer.img} alt={offer.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30" />
+              </div>
 
               <div className="p-8">
                 <span className="inline-flex items-center gap-1.5 text-white font-poppins text-xs font-bold px-3 py-1.5 rounded-full mb-5"

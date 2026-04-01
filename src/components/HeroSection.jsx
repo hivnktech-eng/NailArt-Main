@@ -127,15 +127,16 @@ const HeroSection = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex items-center overflow-hidden bg-white"
+      className="relative min-h-screen flex items-center overflow-hidden bg-[#1A1219]"
       style={{ cursor: 'default' }}
     >
-      {/* ── Soft background ── */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#FADADD] via-white to-[#FFC0CB]/15 z-0" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_50%,_#FF6FAE12_0%,_transparent_100%)] z-0" />
-      {/* subtle grid */}
-      <div className="absolute inset-0 z-0 opacity-[0.03]"
-        style={{ backgroundImage: 'linear-gradient(#FF6FAE 1px,transparent 1px),linear-gradient(90deg,#FF6FAE 1px,transparent 1px)', backgroundSize: '55px 55px' }} />
+      {/* ── Background ── */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1A1219] via-[#241520] to-[#1A1219] z-0" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_65%_50%,_#E8175D12_0%,_transparent_100%)] z-0" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#E8175D]/5 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 z-0" />
+      {/* subtle noise grid */}
+      <div className="absolute inset-0 z-0 opacity-[0.025]"
+        style={{ backgroundImage: 'linear-gradient(#E8175D 1px,transparent 1px),linear-gradient(90deg,#E8175D 1px,transparent 1px)', backgroundSize: '60px 60px' }} />
 
       {/* ── Layout ── */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 xl:px-12 pt-24 pb-12 flex flex-col lg:flex-row items-center gap-12 min-h-screen">
@@ -143,7 +144,7 @@ const HeroSection = () => {
         {/* ======= LEFT TEXT ======= */}
         <div className="flex-1 flex flex-col items-start justify-center py-12 lg:py-0 max-w-xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#FF6FAE]/30 bg-white/70 backdrop-blur-sm text-[#FF6FAE] text-xs font-poppins tracking-[0.2em] uppercase mb-8 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-sm border border-[#E8175D]/30 bg-[#E8175D]/10 backdrop-blur-sm text-[#FF6F9C] text-xs font-poppins tracking-[0.25em] uppercase mb-8 shadow-sm">
             <Sparkles className="w-3.5 h-3.5" />
             Luxury Nail Studio
             <Sparkles className="w-3.5 h-3.5" />
@@ -151,7 +152,7 @@ const HeroSection = () => {
 
           {/* Headline */}
           <h1 ref={headRef}
-            className="font-playfair font-bold text-gray-900 mb-6 leading-[1.08]"
+            className="font-playfair font-bold text-white mb-6 leading-[1.08]"
             style={{ fontSize: 'clamp(2.6rem, 5.5vw, 5rem)', perspective: '800px' }}
           >
             {words.map((word, wi) => (
@@ -176,20 +177,20 @@ const HeroSection = () => {
           </div>
 
           {/* Subtitle */}
-          <p ref={subRef} className="font-poppins text-gray-500 text-base md:text-lg mb-10 leading-relaxed max-w-md">
+          <p ref={subRef} className="font-poppins text-white/60 text-base md:text-lg mb-10 leading-relaxed max-w-md">
             Handcrafted nail artistry that transforms your fingertips into masterpieces.
-            <span className="text-[#FF6FAE] italic font-light"> Where elegance meets creativity.</span>
+            <span className="text-[#FF6F9C] italic font-light"> Where elegance meets creativity.</span>
           </p>
 
           {/* CTAs */}
           <div ref={btnRef} className="flex flex-col sm:flex-row gap-4 mb-14">
-            <button className="group relative overflow-hidden px-9 py-4 rounded-full bg-gradient-to-r from-[#FF6FAE] to-[#E6A4B4] text-white font-poppins font-semibold tracking-widest text-sm uppercase shadow-xl shadow-[#FF6FAE]/30 hover:shadow-[#FF6FAE]/50 hover:-translate-y-1 hover:scale-105 transition-all duration-300">
+            <button className="group relative overflow-hidden px-9 py-4 bg-[#E8175D] text-white font-poppins font-semibold tracking-[0.15em] text-sm uppercase shadow-xl shadow-[#E8175D]/35 hover:shadow-[#E8175D]/55 hover:-translate-y-1 transition-all duration-300">
               <span className="relative z-10 flex items-center gap-2">
                 <Sparkles className="w-4 h-4" /> Explore Designs
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#E6A4B4] to-[#FF6FAE] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-[#B5104A] translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-400" />
             </button>
-            <button className="px-9 py-4 rounded-full border-2 border-[#FF6FAE] text-[#FF6FAE] font-poppins font-semibold tracking-widest text-sm uppercase bg-white/50 backdrop-blur-sm hover:bg-[#FF6FAE] hover:text-white hover:-translate-y-1 hover:shadow-xl hover:shadow-[#FF6FAE]/30 transition-all duration-300">
+            <button className="px-9 py-4 border border-white/20 text-white/80 font-poppins font-semibold tracking-[0.15em] text-sm uppercase bg-white/5 hover:bg-white/10 hover:text-white hover:border-white/40 hover:-translate-y-1 transition-all duration-300">
               Book Appointment
             </button>
           </div>
@@ -198,8 +199,8 @@ const HeroSection = () => {
           <div className="flex gap-10 flex-wrap">
             {[['5,000+', 'Happy Clients'], ['200+', 'Nail Designs'], ['8+', 'Years Excellence']].map(([v, l]) => (
               <div key={l} className="text-left">
-                <div className="font-playfair font-bold text-2xl text-[#FF6FAE]">{v}</div>
-                <div className="font-poppins text-gray-400 text-xs tracking-widest uppercase">{l}</div>
+                <div className="font-playfair font-bold text-2xl text-[#E8175D]">{v}</div>
+                <div className="font-poppins text-white/40 text-xs tracking-widest uppercase">{l}</div>
               </div>
             ))}
           </div>
@@ -220,7 +221,7 @@ const HeroSection = () => {
               <div
                 key={i}
                 ref={el => cardRefs.current[i] = el}
-                className="absolute rounded-[22px] overflow-hidden shadow-2xl will-change-transform"
+                className="absolute rounded-[22px] overflow-hidden will-change-transform"
                 style={{
                   width:  c.w,
                   height: c.h,
@@ -228,9 +229,9 @@ const HeroSection = () => {
                   left:   c.left,
                   transform: `translateZ(${c.z}px) rotateZ(${c.rot}deg) rotateX(${c.rotX}deg) scale(${c.scale})`,
                   transformStyle: 'preserve-3d',
-                  boxShadow: `0 ${10 + c.z / 10}px ${30 + c.z / 5}px rgba(255,111,174,${0.12 + c.z / 1000})`,
-                  border: '2.5px solid rgba(255,255,255,0.7)',
-                  opacity: 0,          // GSAP will animate this in
+                  boxShadow: `0 ${12 + c.z / 10}px ${40 + c.z / 4}px rgba(232,23,93,${0.22 + c.z / 800})`,
+                  border: '2px solid rgba(255,255,255,0.18)',
+                  opacity: 0,
                 }}
               >
                 <img
@@ -240,30 +241,26 @@ const HeroSection = () => {
                   loading="eager"
                   onError={e => {
                     e.target.style.display = 'none';
-                    e.target.parentNode.style.background = `linear-gradient(135deg,#FADADD,#FFC0CB)`;
+                    e.target.parentNode.style.background = `linear-gradient(135deg,#1A1219,#241520)`;
                   }}
                 />
                 {/* Glass sheen */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none" />
-                {/* Glow rim */}
-                <div className="absolute inset-0 rounded-[22px] ring-1 ring-white/40 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent pointer-events-none" />
+                {/* Rose-tinted rim */}
+                <div className="absolute inset-0 rounded-[22px] ring-1 ring-[#E8175D]/20 pointer-events-none" />
               </div>
             ))}
 
             {/* Central glow orb */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 bg-[#FF6FAE]/15 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#E8175D]/12 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[#FF6F9C]/8 rounded-full blur-2xl pointer-events-none" />
           </div>
 
-          {/* Floating badge on the 3D panel */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 bg-white/80 backdrop-blur-md rounded-2xl px-5 py-3 shadow-xl border border-[#FF6FAE]/15 text-center whitespace-nowrap">
-            <div className="font-playfair font-bold text-[#FF6FAE] text-base">✦ Move mouse to explore ✦</div>
-            <div className="font-poppins text-gray-400 text-xs mt-0.5">Interactive 3D nail gallery</div>
-          </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div ref={scrollRef} className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-[#FF6FAE]/60 z-10">
+      <div ref={scrollRef} className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/30 z-10">
         <span className="font-poppins text-xs tracking-widest uppercase">Scroll</span>
         <ChevronDown className="w-5 h-5" />
       </div>

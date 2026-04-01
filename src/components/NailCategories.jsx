@@ -12,9 +12,9 @@ const categories = [
     count: '45 styles',
     tag: 'Classic',
     img: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&h=700&fit=crop&auto=format&q=85',
-    accent: '#FF6FAE',
+    accent: '#FF6FAE', // Pink
     gradient: 'linear-gradient(135deg, #FF6FAE22 0%, #FFC0CB11 100%)',
-    glow: 'rgba(255,111,174,0.35)',
+    glow: 'rgba(255,111,174,0.30)',
   },
   {
     name: 'Floral Fantasy',
@@ -22,9 +22,9 @@ const categories = [
     count: '62 styles',
     tag: 'Trending 🔥',
     img: 'https://images.unsplash.com/photo-1604655855745-2437e20cd268?w=600&h=700&fit=crop&auto=format&q=85',
-    accent: '#E040FB',
-    gradient: 'linear-gradient(135deg, #E040FB22 0%, #CE93D811 100%)',
-    glow: 'rgba(224,64,251,0.30)',
+    accent: '#A0A9D9', // Lavender
+    gradient: 'linear-gradient(135deg, #A0A9D922 0%, #C5CBE111 100%)',
+    glow: 'rgba(160,169,217,0.30)',
   },
   {
     name: 'Geometric Art',
@@ -32,9 +32,9 @@ const categories = [
     count: '38 styles',
     tag: 'Modern',
     img: 'https://images.unsplash.com/photo-1604654894761-3e8a4f9b4f99?w=600&h=700&fit=crop&auto=format&q=85',
-    accent: '#FF5252',
-    gradient: 'linear-gradient(135deg, #FF525222 0%, #FF867F11 100%)',
-    glow: 'rgba(255,82,82,0.28)',
+    accent: '#7CB9E8', // Ice Blue
+    gradient: 'linear-gradient(135deg, #7CB9E822 0%, #A8D8EA11 100%)',
+    glow: 'rgba(124,185,232,0.30)',
   },
   {
     name: 'Ombre Dreams',
@@ -42,9 +42,9 @@ const categories = [
     count: '29 styles',
     tag: 'Popular',
     img: 'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=600&h=700&fit=crop&auto=format&q=85',
-    accent: '#FF9800',
-    gradient: 'linear-gradient(135deg, #FF980022 0%, #FFCC0211 100%)',
-    glow: 'rgba(255,152,0,0.28)',
+    accent: '#FFBFA0', // Peach
+    gradient: 'linear-gradient(135deg, #FFBFA022 0%, #FFDAB911 100%)',
+    glow: 'rgba(255,191,160,0.30)',
   },
   {
     name: 'Glitter & Gems',
@@ -52,9 +52,9 @@ const categories = [
     count: '54 styles',
     tag: 'Luxury ✨',
     img: 'https://images.unsplash.com/photo-1604655074621-4ffed2e25f22?w=600&h=700&fit=crop&auto=format&q=85',
-    accent: '#7C4DFF',
-    gradient: 'linear-gradient(135deg, #7C4DFF22 0%, #B39DDB11 100%)',
-    glow: 'rgba(124,77,255,0.30)',
+    accent: '#D4AF37', // Champagne Gold
+    gradient: 'linear-gradient(135deg, #D4AF3722 0%, #F3E5AB11 100%)',
+    glow: 'rgba(212,175,55,0.30)',
   },
   {
     name: 'Marble & Stone',
@@ -62,9 +62,9 @@ const categories = [
     count: '33 styles',
     tag: 'New',
     img: 'https://images.unsplash.com/photo-1519143686571-bc5e0bf9b9df?w=600&h=700&fit=crop&auto=format&q=85',
-    accent: '#009688',
-    gradient: 'linear-gradient(135deg, #00968822 0%, #4DB6AC11 100%)',
-    glow: 'rgba(0,150,136,0.28)',
+    accent: '#9CB49F', // Sage
+    gradient: 'linear-gradient(135deg, #9CB49F22 0%, #C8D5B911 100%)',
+    glow: 'rgba(156,180,159,0.30)',
   },
   {
     name: '3D Sculptured',
@@ -72,9 +72,9 @@ const categories = [
     count: '28 styles',
     tag: 'Artistic',
     img: 'https://images.unsplash.com/photo-1604655855745-2437e20cd268?w=600&h=700&fit=crop&auto=format&q=85&crop=entropy',
-    accent: '#F06292',
-    gradient: 'linear-gradient(135deg, #F0629222 0%, #F48FB111 100%)',
-    glow: 'rgba(240,98,146,0.30)',
+    accent: '#E6A4B4', // Rose Gold
+    gradient: 'linear-gradient(135deg, #E6A4B422 0%, #FADADD11 100%)',
+    glow: 'rgba(230,164,180,0.30)',
   },
   {
     name: 'Minimalist Chic',
@@ -82,9 +82,9 @@ const categories = [
     count: '41 styles',
     tag: "Editor's pick",
     img: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&h=700&fit=crop&auto=format&q=85&crop=faces',
-    accent: '#29B6F6',
-    gradient: 'linear-gradient(135deg, #29B6F622 0%, #4FC3F711 100%)',
-    glow: 'rgba(41,182,246,0.28)',
+    accent: '#B0C4DE', // Light Steel / Ice
+    gradient: 'linear-gradient(135deg, #B0C4DE22 0%, #E6E6FA11 100%)',
+    glow: 'rgba(176,196,222,0.30)',
   },
 ];
 

@@ -29,10 +29,10 @@ const BookingCTA = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-28 px-6 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #FADADD 0%, #FFC0CB20 30%, #fff 60%, #FADADD15 100%)' }}>
+    <section ref={sectionRef} className="py-28 px-6 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #EADDFF40 0%, #FEE8D630 30%, #fff 60%, #E8F0E440 100%)' }}>
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-[#FF6FAE]/8 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#E6A4B4]/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#A8D8EA]/15 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -73,7 +73,16 @@ const BookingCTA = () => {
 
           {/* Booking form right */}
           <div ref={formRef} className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-br from-[#FF6FAE]/10 to-[#E6A4B4]/5 rounded-[2.5rem] blur-2xl" />
+            {/* Background Image behind form */}
+            <div className="absolute -inset-4 rounded-[2.5rem] overflow-hidden -z-10">
+              <img
+                src="https://images.unsplash.com/photo-1604655074621-4ffed2e25f22?w=800&h=900&fit=crop&auto=format&q=80"
+                alt="Nail art background"
+                className="w-full h-full object-cover opacity-10"
+                loading="lazy"
+              />
+            </div>
+            <div className="absolute -inset-4 bg-gradient-to-br from-[#C5CBE1]/25 to-[#FFBFA0]/20 rounded-[2.5rem] blur-2xl" />
             <div className="relative bg-white rounded-3xl p-8 shadow-2xl shadow-[#FF6FAE]/10 border border-[#FF6FAE]/10">
               <div className="text-center mb-8">
                 <div className="text-4xl mb-3">📅</div>

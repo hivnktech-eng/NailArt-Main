@@ -27,11 +27,11 @@ const Footer = () => {
   return (
     <footer ref={footerRef} className="relative overflow-hidden pt-20 pb-8 px-6 bg-gray-900 text-white">
       {/* Pink gradient top line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF6FAE] via-[#E6A4B4] to-[#FFC0CB]" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#C8D5B9] via-[#C5CBE1] to-[#FFBFA0]" />
 
       {/* Background accents */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-[#FF6FAE]/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#E6A4B4]/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[#C5CBE1]/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#F3E5AB]/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">

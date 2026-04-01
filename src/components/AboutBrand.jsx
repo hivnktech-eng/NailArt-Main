@@ -6,10 +6,10 @@ import { Award, Users, Sparkles, Heart } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 const milestones = [
-  { icon: Users,    value: '5,000+', label: 'Happy Clients',     color: '#FF6FAE' },
-  { icon: Award,    value: '12+',    label: 'Industry Awards',   color: '#E6A4B4' },
-  { icon: Sparkles, value: '200+',   label: 'Unique Designs',    color: '#FF6FAE' },
-  { icon: Heart,    value: '8 Years', label: 'Of Excellence',    color: '#E6A4B4' },
+  { icon: Users,    value: '5,000+', label: 'Happy Clients',     color: '#C8D5B9' }, // Sage Green
+  { icon: Award,    value: '12+',    label: 'Industry Awards',   color: '#D4AF37' }, // Champagne Gold
+  { icon: Sparkles, value: '200+',   label: 'Unique Designs',    color: '#C5CBE1' }, // Lavender
+  { icon: Heart,    value: '8 Years', label: 'Of Excellence',    color: '#A8D8EA' }, // Ice Blue
 ];
 
 const AboutBrand = () => {
@@ -82,7 +82,7 @@ const AboutBrand = () => {
           {/* Visual — real Unsplash image */}
           <div ref={visualRef} className="relative">
             {/* Glow */}
-            <div className="absolute -inset-4 bg-gradient-to-br from-[#FF6FAE]/12 to-[#E6A4B4]/6 rounded-[2.5rem] blur-2xl -z-10" />
+            <div className="absolute -inset-4 bg-gradient-to-br from-[#C8D5B9]/25 to-[#A8D8EA]/20 rounded-[2.5rem] blur-2xl -z-10" />
 
             {/* Main image */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-[#FF6FAE]/15 border border-[#FF6FAE]/10">
@@ -107,8 +107,8 @@ const AboutBrand = () => {
             </div>
 
             {/* Floating badge */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-[#FF6FAE] rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg rotate-12">💅</div>
-            <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-[#E6A4B4] rounded-xl flex items-center justify-center text-white shadow-lg -rotate-6">✨</div>
+            <div className="absolute -top-4 -right-4 w-16 h-16 bg-[#C8D5B9] rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg rotate-12">💅</div>
+            <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-[#A8D8EA] rounded-xl flex items-center justify-center text-white shadow-lg -rotate-6">✨</div>
 
             {/* Second accent image */}
             <div className="absolute -top-6 -left-6 w-28 h-28 rounded-2xl overflow-hidden shadow-xl border-2 border-white">

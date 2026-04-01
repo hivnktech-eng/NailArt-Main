@@ -6,12 +6,12 @@ import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
-  { name: 'Sophia L.', role: 'Fashion Blogger', rating: 5, text: "NailMuse completely transformed my perspective on nail art. The floral design they created for my wedding was absolutely breathtaking — every guest couldn't stop staring at my hands. Pure artistry!", avatar: 'S', color: '#FF6FAE' },
-  { name: 'Emma R.', role: 'Interior Designer', rating: 5, text: "I've been to many nail studios but nothing compares to NailMuse. The attention to detail is extraordinary, the ambiance is luxurious, and my chrome nails lasted 4 weeks without a single chip.", avatar: 'E', color: '#E6A4B4' },
-  { name: 'Priya M.', role: 'Marketing Director', rating: 5, text: "Their gel extensions changed my life! I always had weak, short nails and now I walk into every meeting with confidence. The artists here truly understand what you want before you even finish explaining.", avatar: 'P', color: '#FF6FAE' },
-  { name: 'Chloe T.', role: 'Photographer', rating: 5, text: "As a photographer, I see beauty in everything — and what NailMuse creates is genuinely beautiful. My 3D floral nails were so stunning they actually appeared in my client's photoshoot!", avatar: 'C', color: '#E6A4B4' },
-  { name: 'Aisha K.', role: 'Entrepreneur', rating: 5, text: "The Luxury Spa Mani at NailMuse is an experience unlike any other. Hot stone massage, paraffin treatment, and then the most stunning nail art — I left feeling like royalty.", avatar: 'A', color: '#FF6FAE' },
-  { name: 'Lily W.', role: 'Doctor', rating: 5, text: "I was skeptical about gel extensions but the team put all my concerns to rest. They explained every step, used the safest products, and the result was more beautiful than I imagined.", avatar: 'L', color: '#E6A4B4' },
+  { name: 'Sophia L.', role: 'Fashion Blogger', rating: 5, text: "NailMuse completely transformed my perspective on nail art. The floral design they created for my wedding was absolutely breathtaking — every guest couldn't stop staring at my hands. Pure artistry!", avatar: 'S', color: '#C8D5B9', img: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&auto=format&q=80' },
+  { name: 'Emma R.', role: 'Interior Designer', rating: 5, text: "I've been to many nail studios but nothing compares to NailMuse. The attention to detail is extraordinary, the ambiance is luxurious, and my chrome nails lasted 4 weeks without a single chip.", avatar: 'E', color: '#D4AF37', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&auto=format&q=80' },
+  { name: 'Priya M.', role: 'Marketing Director', rating: 5, text: "Their gel extensions changed my life! I always had weak, short nails and now I walk into every meeting with confidence. The artists here truly understand what you want before you even finish explaining.", avatar: 'P', color: '#FF6FAE', img: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&h=100&fit=crop&auto=format&q=80' },
+  { name: 'Chloe T.', role: 'Photographer', rating: 5, text: "As a photographer, I see beauty in everything — and what NailMuse creates is genuinely beautiful. My 3D floral nails were so stunning they actually appeared in my client's photoshoot!", avatar: 'C', color: '#C5CBE1', img: 'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=100&h=100&fit=crop&auto=format&q=80' },
+  { name: 'Aisha K.', role: 'Entrepreneur', rating: 5, text: "The Luxury Spa Mani at NailMuse is an experience unlike any other. Hot stone massage, paraffin treatment, and then the most stunning nail art — I left feeling like royalty.", avatar: 'A', color: '#FFBFA0', img: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop&auto=format&q=80' },
+  { name: 'Lily W.', role: 'Doctor', rating: 5, text: "I was skeptical about gel extensions but the team put all my concerns to rest. They explained every step, used the safest products, and the result was more beautiful than I imagined.", avatar: 'L', color: '#A8D8EA', img: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=100&h=100&fit=crop&auto=format&q=80' },
 ];
 
 const Testimonials = () => {
@@ -82,16 +82,26 @@ const Testimonials = () => {
                 {/* Stars */}
                 <div className="flex gap-1 mb-4">
                   {[...Array(t.rating)].map((_, s) => (
-                    <Star key={s} className="w-4 h-4 fill-[#FF6FAE] text-[#FF6FAE]" />
+                    <Star key={s} className="w-4 h-4 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
 
                 <p className="font-poppins text-gray-600 text-sm leading-relaxed mb-6 italic">"{t.text}"</p>
 
                 <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-full flex items-center justify-center text-white font-playfair font-bold text-lg shadow-md"
-                    style={{ background: `linear-gradient(135deg, ${t.color}, ${t.color}99)` }}>
-                    {t.avatar}
+                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 flex-shrink-0 shadow-md"
+                    style={{ borderColor: t.color }}>
+                    <img
+                      src={t.img}
+                      alt={t.name}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      onError={e => {
+                        e.target.style.display = 'none';
+                        e.target.parentNode.style.background = `linear-gradient(135deg, ${t.color}, ${t.color}99)`;
+                        e.target.parentNode.innerHTML = `<span class="w-full h-full flex items-center justify-center text-white font-bold text-lg">${t.avatar}</span>`;
+                      }}
+                    />
                   </div>
                   <div>
                     <div className="font-playfair font-bold text-gray-800 text-base">{t.name}</div>
